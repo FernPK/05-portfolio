@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto+Condensed:wght@300;400&display=swap');
+body {
+  margin: 0px;
+  font-family: 'Roboto Condensed', sans-serif;
+  overflow-x: hidden;
+}
+
+#navbar {
+  background-color: #C74B50;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  min-height: 60px;
+  z-index: 3;
+}
+
+#navbar ul{
+  list-style: none;
+  float: right;
+  margin: 20px 40px;
+}
+
+#navbar ul li{
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+#navbar ul li:hover{
+  background-color: #ab3f43;
+}
+
+#navbar ul li a{
+  text-decoration: none;
+  color: white;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+#welcome-section {
+  height: 100vh;
+  width: 100%;
+  background-color: #46244C;
+  color: white;
+  text-align: center;
+}
+
+#welcome-section h1{
+  margin: 0px;
+  padding-top: 45vh;
+  font-family: 'Poppins', sans-serif;
+  font-size: 10vh;
+}
+
+#welcome-section h2{
+  font-weight: 300;
+  letter-spacing: 2px;
+  font-size: 1.7rem;
+}
+
+#deco-up1 img{
+  position: absolute;
+  left: 0px;
+  top: 60px;
+  width: 70%;
+  height: 35vh;
+  animation: slide-in-up 2s ease-out 0s 1;
+}
+
+@keyframes slide-in-up {
+  0%{
+    left: -70%;
+  }
+}
+
+#deco-up2 img{
+  position: absolute;
+  left: -25%;
+  top: 60px;
+  width: 70%;
+  height: 35vh;
+  animation: slide-in-up 3s ease-out 0s 1;
+}
+
+#deco-down1 img{
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  width: 70%;
+  height: 35vh;
+  transform: rotate(180deg);
+  animation: slide-in-down 2s ease-out 0s 1;
+}
+
+@keyframes slide-in-down {
+  0% {
+    right: -70%;
+  }
+}
+
+#deco-down2 img{
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  width: 45%;
+  height: 22vh;
+  transform: rotate(180deg);
+  animation: slide-in-down 3s ease-out 0s 1;
+}
+
+#purple {
+  width: 100%;
+  height: 20px;
+  position: absolute;
+  top: 100vh;
+  background-color: #712B75;
+}
+
+#projects {
+  background-color: #712B75;
+  color: white;
+  padding: 8vh 0px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 40% 40% 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "text text text text"
+    "blank1 item1 item2 blank2"
+    "blank1 item3 item4 blank2";
+}
+
+.blank1 {
+  grid-area: blank1;
+}
+
+.blank2 {
+  grid-area: blank2;
+}
+
+#projects p{
+  margin: 0px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 2.8rem;
+  grid-area: text;
+}
+
+.project-tile {
+  width: 80%;
+  margin: 6vh auto;
+  background-color: white;
+  box-shadow: 0px 10px 10px #381c3d;
+}
+
+#item1 {
+  grid-area: item1;
+}
+
+#item2 {
+  grid-area: item2;
+}
+
+#item3 {
+  grid-area: item3;
+}
+
+#item4 {
+  grid-area: item4;
+}
+
+.project-tile a img{
+  width: 100%;
+}
+
+.project-tile a h2{
+  text-align: center;
+  margin: 0px;
+  padding: 20px 15px;
+  color: #46244C;
+  font-size: 1.5rem;
+}
+
+.project-tile a{
+  text-decoration: none;
+}
+
+#contact {
+  height: 60vh;
+  background-color: #9f52a3;
+}
+
+#contact p{
+  margin: 0px;
+  text-align: center;
+  padding-top: 20vh;
+  color: white;
+  font-weight: 400;
+  font-size: 2.8rem;
+}
+
+#contact-link {
+  margin: 20px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 20px 15%;
+}
+
+#contact-link a{
+  text-decoration: none;
+  display: inline-block;
+  padding: 15px 15px;
+  color: white;
+  font-size: 1.4rem;
+}
+
+#contact-link a:hover {
+  background-color: #712B75;
+}
+
+footer {
+  background-color: #9f52a3;
+  color: white;
+  border-top: 2px solid #712B75;
+  padding: 15px 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 1.1rem;
+}
+
+#disclaimer {
+  width: 65%;
+}
+
+#forfcc {
+  padding-right: 20px;
+}
+
+@media (max-width: 1050px) {
+  #contact-link a label{
+    display: none;
+  }
+  #contact-link a{
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 700px) {
+  #navbar ul{
+    padding-left: 0px;
+    float: none;
+  }
+
+  #navbar {
+    text-align: center;
+  }
+
+  #navbar ul li{
+    display: inline-block;
+    padding: 10px 15px;
+  }
+
+  #welcome-section h1{
+    font-size: 2.8rem;
+  }
+  
+  #welcome-section h2{
+    font-size: 1.5rem;
+  }
+
+  #projects p{
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  #projects {
+    padding: 5vh 0px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 80% 1fr;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: 
+    "text text text"
+    "blank1 item1 blank2"
+    "blank1 item2 blank2"
+    "blank1 item3 blank2"
+    "blank1 item4 blank2";
+  }
+
+  .project-tile {
+    width: 80%;
+    margin: 20px auto;
+    background-color: white;
+    box-shadow: 0px 10px 10px #381c3d;
+  }
+
+  #contact p{
+    font-size: 2rem;
+  }
+
+  footer {
+    display: block;
+  }
+
+  #disclaimer {
+    width: 100%;
+  }
+  
+  #forfcc {
+    padding-right: 0px;
+  }
+
+}
